@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Cookies } from 'react-cookie';
 
 async function loginUser(credentials) {

@@ -1,33 +1,30 @@
-import React from 'react';
+import { Button, Modal } from "bootstrap";
 
-
-function Modal_insertar_pregunta(){
-    return (
-        <div class="modal fade addpregunta" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog  modal-sm modal-lg">
-          <div class="modal-content">
-            <div class="modal-header unach">
-              <h2 style="color: white;" class="text-center" >AGREGAR PREGUNTA<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button></h2>
-            </div> 
-            <div class="modal-body"> 
-              <hr/>
-                <div class="form-group">
-                   <div class="form-group">
-                      <input type="text" class="form-control" autocomplete="off" id="pregunta"/>
-                </div>
-                </div>
-               
-            </div><br/><br/>
-            <div class="modal-footer" id="footer">
-              <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-                <button type="submit" data-dismiss="modal" class="btn btn-success" id="pinsert">Agregar</button>
-            </div>
-          </div>
-        </div>
-    </div>
-    );
+function Modal_insertar_pregunta(props) {
+  return (
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Modal heading
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <h4>Centered Modal</h4>
+        <p>
+          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
+          consectetur ac, vestibulum at eros.
+        </p>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button onClick={props.onHide}>Close</Button>
+      </Modal.Footer>
+    </Modal>
+  );
 }
-
 export default Modal_insertar_pregunta;
