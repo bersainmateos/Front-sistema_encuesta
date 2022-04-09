@@ -11,8 +11,6 @@ async function loginUser(credentials) {
   }).then(data => data.json())
  }
 
-
-
 function Login(){
   const cookie = new Cookies();
 

@@ -20,7 +20,6 @@ import {
 /**IMPORTANDO LOS ESTILOS CSS  */
 import "./componentes/styles/bootstrap.css"
 import "./componentes/styles/estilos_propios.css"
-import Basic from "./componentes/Table";
 
 function App() {
   const cookie = new Cookies();
@@ -34,14 +33,12 @@ function App() {
           </Route>
           
           <Route path="/Alta-de-pregunta">
-            <Modal_insertar_pregunta/>
             <Header user={cookie.get('usuario')} />
             <Listar_preguntas/>
           </Route>
 
           <Route exact path="/Basic">
             <Header user={cookie.get('usuario')} />
-            <Basic/>
           </Route>
 
           <Route exact path="/Registrar_encuestador">
