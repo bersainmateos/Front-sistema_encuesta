@@ -10,7 +10,6 @@ const Crud_pregunta = () => {
   const [modalEliminar, setModalEliminar] = useState(false);
   const [modalInsertar, setModalInsertar] = useState(false);
 
-
   const ordenarAsc=(p_array_json, p_key) => {
     p_array_json.sort((a, b) => {
       return a[p_key] > b[p_key];
