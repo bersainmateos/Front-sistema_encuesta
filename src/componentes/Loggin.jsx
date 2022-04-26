@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Cookies } from 'react-cookie';
 
  const loginUser = async (credentials) => {
-  return fetch('http://http://ec2-18-119-108-56.us-east-2.compute.amazonaws.com:8888/api/encuesta/login', {
+  return fetch('http://ec2-18-119-108-56.us-east-2.compute.amazonaws.com:8888/api/encuesta/login', {
             method: 'POST',
             body: JSON.stringify(credentials)
           }).then(data => data.json())
