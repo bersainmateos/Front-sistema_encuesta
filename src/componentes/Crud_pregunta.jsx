@@ -18,7 +18,7 @@ const Crud_pregunta = () => {
   }
 
   useEffect(()=>{
-    fetch('http://ec2-18-118-31-164.us-east-2.compute.amazonaws.com:8888/api/encuesta/listar/pregunta', { method: 'GET'}).then( respuesta =>
+    fetch('http://http://ec2-18-119-108-56.us-east-2.compute.amazonaws.com:8888/api/encuesta/listar/pregunta', { method: 'GET'}).then( respuesta =>
       respuesta.json()
     ).then(respuesta => {
         let data=respuesta.Respuesta;
@@ -54,12 +54,12 @@ const Crud_pregunta = () => {
           pregunta:preguntaSeleccionada.nuevaPregunta
         }
 
-    fetch('http://ec2-18-118-31-164.us-east-2.compute.amazonaws.com:8888/api/encuesta/actualizar/pregunta', { method: 'PUT', body: JSON.stringify(valorInsertar) }).then( respuesta =>
+    fetch('http://http://ec2-18-119-108-56.us-east-2.compute.amazonaws.com:8888/api/encuesta/actualizar/pregunta', { method: 'PUT', body: JSON.stringify(valorInsertar) }).then( respuesta =>
       respuesta.json()
      ).then(respuesta => {
         if(respuesta.Status){
           alertify.success('Se actualizo correctamente!')
-          fetch('http://ec2-18-118-31-164.us-east-2.compute.amazonaws.com:8888/api/encuesta/listar/pregunta', { method: 'GET'}).then( respuesta =>
+          fetch('http://http://ec2-18-119-108-56.us-east-2.compute.amazonaws.com:8888/api/encuesta/listar/pregunta', { method: 'GET'}).then( respuesta =>
             respuesta.json()
           ).then(respuesta => {
             let data=respuesta.Respuesta;
@@ -80,12 +80,12 @@ const Crud_pregunta = () => {
       status:false
     }
     console.log(valorInsertar);
-    fetch('http://ec2-18-118-31-164.us-east-2.compute.amazonaws.com:8888/api/encuesta/eliminar/pregunta', { method: 'DELETE', body: JSON.stringify(valorInsertar) }).then( respuesta =>
+    fetch('http://http://ec2-18-119-108-56.us-east-2.compute.amazonaws.com:8888/api/encuesta/eliminar/pregunta', { method: 'DELETE', body: JSON.stringify(valorInsertar) }).then( respuesta =>
     respuesta.json()
   ).then(respuesta => {
       if(respuesta.Status){
         alertify.success('Se elimino correctamente!');
-        fetch('http://ec2-18-118-31-164.us-east-2.compute.amazonaws.com:8888/api/encuesta/listar/pregunta', { method: 'GET'}).then( respuesta =>
+        fetch('http://http://ec2-18-119-108-56.us-east-2.compute.amazonaws.com:8888/api/encuesta/listar/pregunta', { method: 'GET'}).then( respuesta =>
           respuesta.json()
         ).then(respuesta => {
           let data=respuesta.Respuesta;
@@ -119,12 +119,12 @@ const Crud_pregunta = () => {
       pregunta:preguntaSeleccionada.nuevaPregunta
     }
 
-    fetch('http://ec2-18-118-31-164.us-east-2.compute.amazonaws.com:8888/api/encuesta/agregar/pregunta', { method: 'POST', body: JSON.stringify(valorInsertar) }).then( respuesta =>
+    fetch('http://http://ec2-18-119-108-56.us-east-2.compute.amazonaws.com:8888/api/encuesta/agregar/pregunta', { method: 'POST', body: JSON.stringify(valorInsertar) }).then( respuesta =>
       respuesta.json()
     ).then(respuesta => {
         if(respuesta.Status){
           alertify.success('Se agregó correctamente!');
-          fetch('http://ec2-18-118-31-164.us-east-2.compute.amazonaws.com:8888/api/encuesta/listar/pregunta', { method: 'GET'}).then( respuesta =>
+          fetch('http://http://ec2-18-119-108-56.us-east-2.compute.amazonaws.com:8888/api/encuesta/listar/pregunta', { method: 'GET'}).then( respuesta =>
             respuesta.json()
           ).then(respuesta => {
             let data=respuesta.Respuesta;
